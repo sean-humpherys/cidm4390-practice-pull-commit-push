@@ -11,7 +11,7 @@ Edit one daily question each of five days. Each day issue the following commands
     git push
     git status
 
-You can double check a successful commit and push at [GitHub repo](https://github.com/wtamucis/cidm4390-practice-pull-commit-push)
+You can double-check a successful commit and push at [GitHub repo](https://github.com/sean-humpherys/cidm4390-practice-pull-commit-push)
 
 ## Day 1’s Question
 
