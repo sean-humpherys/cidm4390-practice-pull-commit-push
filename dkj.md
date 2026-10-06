@@ -16,11 +16,12 @@ You can double-check a successful commit and push at [GitHub repo](https://githu
 ## Day 1’s Question
 
 If two coders, working in the main branch, modify the same file commit and push at different times, what are the consequences? Please put your answer into a markdown format.
-
+https://share.gemini.google/9WHcruNaviKq 
 
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+https://share.gemini.google/xGGlHU7hW4Ot 
 
 ## Day 3’s Question
 
