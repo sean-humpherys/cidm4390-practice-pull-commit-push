@@ -17,10 +17,76 @@ You can double-check a successful commit and push at [GitHub repo](https://githu
 
 If two coders, working in the main branch, modify the same file commit and push at different times, what are the consequences? Please put your answer into a markdown format.
 
+## Scenario
+Coder A commits and pushes to `main` first. Coder B committed locally on the same file, based on the older version of `main`, and pushes afterward.
+
+## Consequences
+
+**1. B's push is rejected**
+Git refuses it as a non-fast-forward push, because the remote has commits B's local branch lacks. Nothing on the remote changes.
+
+```
+! [rejected]  main -> main (fetch first)
+```
+
+**2. B must integrate A's work first**
+B runs `git pull` (fetch + merge) or `git pull --rebase` (fetch + replay B's commits on top of A's).
+
+**3. Result depends on what each person changed**
+
+| Situation | Outcome |
+|---|---|
+| Different regions of the file | Git auto-merges. With merge, a merge commit is created. With rebase, history stays linear. |
+| Same lines changed | Merge conflict. Git marks the file with `<<<<<<<`, `=======`, `>>>>>>>`. B must resolve it by hand, stage the file, and finish the merge or rebase (`git commit` or `git rebase --continue`). |
+| Clean merge but incompatible logic (e.g., A renames a function, B adds a call to the old name) | No Git warning. The code can break at build or runtime. Only tests or CI catch it. |
+
+**4. Force push (`git push --force`) is the dangerous case**
+If B forces the push instead of integrating, A's commits are dropped from the remote `main`. They can be recovered from A's local clone or the reflog, but anyone who pulls next gets a history without them. `--force-with-lease` fails if the remote has moved, which avoids this.
+
+**5. Rebase side effect**
+`git pull --rebase` rewrites B's local commits (new hashes). This is harmless if they haven't been pushed.
+
+**6. No consequence if the timing differs**
+If B pulled A's commit before committing, the push is a plain fast-forward with no conflict, regardless of both editing the same file.
+
+## Prevention
+- Pull or rebase frequently before starting work and before pushing.
+- Use feature branches with pull requests instead of committing directly to `main`.
+- Enable branch protection (block force pushes, require review and passing CI).
+- Keep commits small and files focused to reduce overlap.
+
 
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+
+## Best Practices
+Commit often
+
+    After each small, logical change
+
+    When tests pass
+
+    At least once per hour
+
+Push regularly
+
+    Every 1–3 commits
+
+    At least once per day
+
+    After finishing a sub-feature or before stopping work
+
+Keep commits atomic
+
+    One logical change per commit
+
+    Clear message
+
+    Easy to review and revert
+
+Simple rule: Commit small and often. Push every few commits or daily.
+
 
 ## Day 3’s Question
 
