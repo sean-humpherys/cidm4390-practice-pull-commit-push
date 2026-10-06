@@ -21,7 +21,7 @@ You can double-check a successful commit and push at [GitHub repo](https://githu
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
-
+Commit often (every logical unit of work, roughly every 15-60 minutes of active coding). Push at least a few times a day, and always before you step away.
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
