@@ -26,7 +26,7 @@ This is why developers should regularly use git pull when collaborating. It help
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
-Answer: 
+Answer:Developers should commit often, usually after completing a small, logical piece of work such as a feature or bug fix. Commits should be clear and should ideally contain working code. Developers should also push regularly so teammates can access their changes. A good minimum is at least once per day when collaborating, but pushing after important completed work is even better.
 
 ## Day 3’s Question
 
