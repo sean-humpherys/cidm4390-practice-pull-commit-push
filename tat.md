@@ -24,6 +24,10 @@ If two coders modify the same file on the main branch, the person who pushes fir
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
+**Answer:**
+A good practice is to commit whenever you have completed a small, meaningful piece of work rather than waiting until an entire project is finished. There is no exact required number of commits per day, but committing several times during a work session can make it easier to track changes and undo mistakes. Pushing should also be done regularly, such as after completing a logical piece of work or at the end of a work session, so the remote repository stays reasonably up to date.
+
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
