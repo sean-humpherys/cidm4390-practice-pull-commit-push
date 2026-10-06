@@ -51,7 +51,45 @@ Push the finalized, combined code to the remote repository (git push).
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+1. Committing Code
 
+A commit is a snapshot of your local repository at a specific point in time.
+
+Best Practices
+
+Make Atomic Commits: Each commit should encompass a single, logical change. If you fixed a bug and added a new feature, those should be two separate commits. This makes it easier to track changes, review code, and revert if something goes wrong.
+
+Write Clear Commit Messages: Use the imperative mood (e.g., "Add user authentication," not "Added user authentication"). The first line should be a concise summary (under 50 characters), followed by a blank line and a more detailed explanation if necessary.
+
+Don't Commit Broken Code: While you might save intermediate steps locally, try to ensure that the code compiles and passes basic tests before you finalize a commit, especially if you are about to push it.
+
+Separate Configuration from Code: Don't commit local configuration files or secrets (use .gitignore).
+
+Recommended Frequency
+
+Commit Often: You should be committing multiple times a day.
+
+Rule of Thumb: Commit every time you complete a small unit of work. This could be anywhere from every 15 minutes to every 2 hours, depending on the complexity of the task.
+
+2. Pushing Code
+
+Pushing syncs your local commits to a remote server (like GitHub, GitLab, or Bitbucket), making them available to your team and serving as a backup.
+
+Best Practices
+
+Push to Feature Branches: Always do your active development on a feature branch, not directly on main or develop.
+
+Ensure Tests Pass Before Pushing to Shared Branches: If you are pushing to a branch that others pull from, make absolutely sure your code doesn't break the build.
+
+Rebase or Merge Before Pushing: If others have pushed changes to the remote branch, pull those changes and integrate them (via merge or rebase) before pushing your own.
+
+Recommended Frequency
+
+Push at Least Daily: At a minimum, push your feature branch to the remote repository at the end of every workday. This ensures your work is backed up in case your local machine fails.
+
+Push at Milestones: Push your code when you have reached a logical milestone, are ready to open a Pull Request (PR), or need another developer to review or collaborate on your specific branch.
+
+Rule of Thumb: Most developers push 1 to 3 times a day.
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
