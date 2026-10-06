@@ -26,6 +26,12 @@ This is why it is important to use 'git pull' regularly when multiple developers
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
+### Answer - Day 2
+
+A good practice is to **commit frequently**, especially after completing and testing a specific task or meaningful change. Commits should be small enough that they are easy to understand and should include a clear message explaining what was changed.
+
+Developers should also **push regularly** so their work is available to the rest of the team and backed up in the remote repository. At minimum, pulling and pushing daily is a good habit when working with others, but commits and pushes may happen multiple times throughout the day as tasks are completed. Before pushing, changes should be tested to make sure the code is working properly.
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
