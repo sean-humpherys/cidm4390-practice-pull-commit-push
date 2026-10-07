@@ -36,6 +36,12 @@ Developers should also **push regularly** so their work is available to the rest
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+### Answer - Day 3
+
+A **branch** in Git is a separate line of development that allows developers to make changes without directly affecting the main branch. Branches are useful when working on new features, fixing bugs, or testing changes because developers can work independently and merge their changes back into the main branch when they are ready.
+
+Best practices include creating a separate branch for each feature or task, giving branches clear and descriptive names, and keeping changes focused on one purpose. Developers should also keep their branches updated with the main branch, commit changes regularly, and test their work before merging. Once a branch has been successfully merged and is no longer needed, it can be deleted to keep the repository organized.
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
