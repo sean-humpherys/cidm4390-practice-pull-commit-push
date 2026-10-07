@@ -26,6 +26,7 @@ https://share.gemini.google/xGGlHU7hW4Ot
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
+https://share.gemini.google/NMNw9TZwxk6V 
 
 ## Day 4’s Question
 
