@@ -17,24 +17,37 @@ You can double-check a successful commit and push at [GitHub repo](https://githu
 
 If two coders, working in the main branch, modify the same file commit and push at different times, what are the consequences? Please put your answer into a markdown format.
 
-## What Happens:
+### What Happens:
 1. A pushes first: succeeds.
 2. B's push is rejected: B's local main is behind the remote (! [rejected] main -> main (fetch first)).
 3. B must integrate A's work: git pull or git pull --rebase.
 - Different regions of the file: Git auto-merges.
 - Same or adjacent lines: merge conflict; B resolves it manually.
 
-## Consequences:
-Delay and manual effort for the second coder,
-Possible extra merge commit in history,
-Semantic conflicts: a clean auto-merge can still break the code,
-Bad resolution: A's changes can be accidentally dropped,
-Broken main: if the merge isn't built and tested before pushing,
-git push --force: erases A's commits from the remote.
+### Consequences:
+- Delay and manual effort for the second coder
+- Possible extra merge commit in history,
+- Semantic conflicts: a clean auto-merge can still break the code,
+- Bad resolution: A's changes can be accidentally dropped,
+- Broken main: if the merge isn't built and tested before pushing,
+- git push --force: erases A's commits from the remote.
 
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+
+### Git Commit and Push Frequency
+
+#### Commit
+- Commit after each small, logical change (several per hour while actively developing).
+- One logical change per commit.
+- Don't commit broken code to shared branches.
+- Avoid giant end-of-day commits.
+
+#### Push
+- Push at least once per working day.
+- Ideally push after each meaningful milestone (a completed feature or passing tests).
+- Pull before you push on shared branches.
 
 ## Day 3’s Question
 
