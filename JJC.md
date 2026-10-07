@@ -22,6 +22,7 @@ If two coders, working in the main branch, modify the same file commit and push 
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+    Commit early and often, but make each commit meaningful. Push regularly, especially when working with others.
 
 ## Day 3’s Question
 
