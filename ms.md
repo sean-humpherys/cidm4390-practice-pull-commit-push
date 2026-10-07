@@ -92,6 +92,38 @@ Simple rule: Commit small and often. Push every few commits or daily.
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+## Branches
+
+A branch is a lightweight pointer to a commit, not a copy of files. HEAD points to the branch you have checked out, and each new commit moves that branch forward.
+
+Core commands
+bash
+git branch -vv                  # list branches with upstream info
+git switch -c feature/login     # create and switch (Git 2.23+)
+git merge feature/login         # merge into current branch
+git rebase main                 # replay current branch on top of main
+git branch -d feature/login     # delete if merged
+git push origin --delete feature/login   # delete remote branch
+git fetch --prune               # clear stale remote-tracking refs
+Merge vs. rebase
+Merge: preserves history, non-destructive. Use for integrating into shared branches.
+Rebase: rewrites commits into linear history. Use only on your own unshared branches.
+Squash merge: collapses a branch into one commit. Clean history, loses individual commits.
+
+Strategies
+Trunk-based: very short-lived branches merged into main often. Suits continuous deployment.
+GitHub Flow: main always deployable; branch, pull request, review, merge.
+Git Flow: long-lived main and develop plus feature/*, release/*, hotfix/*. Suits versioned releases, heavier process.
+
+Best practices
+Name consistently: feature/user-login, fix/checkout-null, optionally with a ticket ID.
+Keep branches short-lived and single-purpose.
+Branch from an up-to-date base and sync with it regularly.
+Delete branches after merging, locally and remotely.
+Protect main: require pull requests, passing CI, and review; block force pushes.
+Never rewrite commits others have pulled. If you must force push, use --force-with-lease.
+Recover deleted branches with git reflog.
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
