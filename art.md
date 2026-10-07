@@ -49,14 +49,6 @@ Coder B would then need to:
 3. Commit the resolved changes.
 4. Push the updated branch to `main`.
 
-## Example
-
-Suppose the original file contains:
-
-```text
-Hello World
-
-
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
