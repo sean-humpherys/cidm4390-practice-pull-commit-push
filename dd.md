@@ -53,6 +53,19 @@ What are best practices regarding how often to commit and push, including recomm
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+### Git Branches
+
+#### What Is a Branch
+- A movable pointer to a commit that lets you work in isolation from `main`.
+
+#### Best Practices
+- Keep `main` stable; it should always build and pass tests.
+- Use one branch per feature, fix, or experiment, with clear names (`feature/login-page`).
+- Keep branches short-lived and pull from `main` regularly to avoid conflicts.
+- Use pull requests, code review, and CI before merging.
+- Protect `main` (required reviews, passing CI, no force-push).
+- Delete branches after merging.
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
