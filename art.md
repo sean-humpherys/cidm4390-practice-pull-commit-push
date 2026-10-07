@@ -61,6 +61,32 @@ Hello World
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
+# Best Practices for Committing and Pushing Code
+
+## How Often Should You Commit?
+
+A good practice is to **commit frequently whenever you complete a small, logical piece of work**.
+
+### Recommended Frequency
+
+- **Commit:** After completing a small, working change, typically every **15–60 minutes** of active development.
+- **Push:** At least **several times per day**, or whenever you reach a meaningful checkpoint.
+- **Before stopping work:** Push your latest commits so your work is backed up remotely.
+
+> **Rule of thumb:** Make commits **small and meaningful**, rather than making one large commit at the end of the day.
+
+## What Makes a Good Commit?
+
+Each commit should represent **one logical change**.
+
+### Good Examples
+
+```text
+Add login validation
+Fix navigation menu bug
+Update database connection
+Add error handling to checkout process
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
