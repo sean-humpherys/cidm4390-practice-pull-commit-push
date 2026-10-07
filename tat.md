@@ -32,6 +32,9 @@ A good practice is to commit whenever you have completed a small, meaningful pie
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+**Answer:**
+Branches in Git allow developers to work on features, fixes, or other changes without directly changing the main branch. A common best practice is to create a separate branch for each feature or task, make and test the changes there, and then merge the branch into the main branch when the work is ready. This helps keep the main branch stable and allows multiple developers to work on different parts of a project at the same time.
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
