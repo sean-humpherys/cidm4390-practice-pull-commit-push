@@ -93,7 +93,20 @@ Rule of Thumb: Most developers push 1 to 3 times a day.
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
+A Git branch is a lightweight, movable pointer to a specific commit. It creates an isolated parallel workspace where you can develop features, fix bugs, or experiment safely without affecting the stable main codebase.
 
+Best Practices
+Adopt a Naming Convention: Use clear prefixes to indicate the branch's purpose (e.g., feature/login-page, bugfix/header-alignment, hotfix/api-crash).
+
+Keep Them Short-Lived: Merge branches back into your main branch as quickly as possible—ideally within a few days—to prevent massive merge conflicts later.
+
+One Branch, One Task: Keep branches strictly focused on a single feature or fix. Do not mix unrelated changes.
+
+Sync Frequently: Regularly pull or rebase updates from the main branch into your active feature branch to stay up-to-date with your team's ongoing work.
+
+Use Pull/Merge Requests: Always require code reviews via Pull Requests before merging any branch into production.
+
+Delete After Merging: Once a branch's code is successfully merged, delete the branch locally and remotely to keep the repository clean.
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
