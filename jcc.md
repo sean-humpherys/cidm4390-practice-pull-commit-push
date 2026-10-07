@@ -26,6 +26,8 @@ Commit often (every logical unit of work, roughly every 15-60 minutes of active 
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+https://claude.ai/share/0e6b7624-3c60-4b5d-8c09-c120656ebc21
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
