@@ -32,7 +32,7 @@ Answer:Developers should commit often, usually after completing a small, logical
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
-Answer: 
+Answer: A branch in Git is a separate line of development that allows developers to work on changes without affecting the main branch. Best practices include creating a branch for each feature or fix, giving branches clear names, keeping them focused on one task, and regularly pulling changes from the main branch to stay up to date. After the work is tested and reviewed, the branch can be merged back into `main`.
 
 ## Day 4’s Question
 
