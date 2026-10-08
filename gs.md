@@ -38,7 +38,7 @@ Answer: A branch in Git is a separate line of development that allows developers
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
-Answer: 
+Answer: `git fetch` downloads new changes from the remote repository but does not automatically merge them into your current branch. `git pull` downloads the changes and then merges them into your current branch. For this assignment, `git pull` is more useful because it keeps your local copy updated with everyone else's work before you make changes.
 
 ## Day 5’s Question
 
