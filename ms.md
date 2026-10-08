@@ -128,6 +128,14 @@ Recover deleted branches with git reflog.
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+## Git Pull and Git Fetch
+git fetch: Downloads new commits from the remote but does not change your local branch or files.
+git pull: Does git fetch and then git merge into your current branch. With --rebase, it rebases instead.
+
+git pull is more convenient, but it merges immediately, so you can hit conflicts without reviewing the incoming changes first. git fetch lets you inspect them (git diff HEAD origin/main) before merging.
+
+git pull is not objectively better. My professor may recommend it for simplicity, and it's popular in beginner tutorials, but for collaborative development, git fetch is a safer habit. 
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
