@@ -16,6 +16,9 @@ You can double-check a successful commit and push at [GitHub repo](https://githu
 ## Day 1’s Question
 
 If two coders, working in the main branch, modify the same file commit and push at different times, what are the consequences? Please put your answer into a markdown format.
+First coder will be successfull
+Second Coders will be rejected
+Changes need to be synchronized prior (test)
 
 
 ## Day 2’s Question
