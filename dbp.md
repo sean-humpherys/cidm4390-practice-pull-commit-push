@@ -78,6 +78,78 @@ git push origin main
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
+# Git Best Practices: How Often Should You Commit and Push?
+
+## 1. How Often Should You Commit?
+
+A **commit** saves a snapshot of changes in your local Git repository.
+
+**Best practice:** Commit frequently, whenever you complete a small, meaningful unit of work.
+
+- Commit after completing a feature, fixing a bug, or making a logical improvement.
+- Make small, focused commits rather than one large commit containing many unrelated changes.
+- Write clear, descriptive commit messages explaining what changed.
+- Commit several times a day when actively developing, if meaningful changes are completed.
+- Test your changes before committing whenever practical.
+
+**Example:**
+
+```bash
+git add -A
+git commit -m "Add login form validation"
+```
+
+## 2. How Often Should You Push?
+
+A **push** uploads your local commits to a remote repository, such as GitHub.
+
+**Best practice:** Push regularly, especially after completing and testing meaningful work.
+
+- Push after finishing a logical unit of work that is ready to share.
+- Push at least once per working day when actively collaborating, if you have commits to share.
+- Push before switching computers or ending your work session.
+- Push more frequently when teammates depend on your changes.
+- Avoid pushing broken or untested code to shared branches.
+
+**Example:**
+
+```bash
+git push
+```
+
+## 3. What Is the Difference Between Commit and Push?
+
+| Commit | Push |
+|---|---|
+| Saves changes locally | Sends commits to the remote repository |
+| Creates a record of changes | Shares changes with collaborators |
+| Can be done without internet access | Requires access to the remote repository |
+| Should happen after meaningful changes | Should happen when changes are ready to share |
+
+## 4. Recommended Daily Git Workflow
+
+1. **Pull** the latest changes before starting work.
+2. Make a small, meaningful change.
+3. **Test** or review the change.
+4. **Commit** the completed change with a descriptive message.
+5. **Push** the commit to the remote repository.
+6. Run `git status` to verify your repository's state.
+
+```bash
+git pull
+git add -A
+git commit -m "Describe the completed change"
+git push
+git status
+```
+
+## 5. Key Takeaway
+
+**Commit often, push regularly, and pull before starting work.**
+
+There is no universal rule requiring a commit every certain number of minutes. The frequency should depend on meaningful progress, the team's workflow, and how frequently changes need to be shared.
+
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
