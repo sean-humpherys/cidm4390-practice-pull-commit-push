@@ -27,6 +27,7 @@ What are best practices regarding how often to commit and push, including recomm
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
+        A Git branch is a separate line of development in a Git repository. Branches allow developers to work on different features, fixes, or experiments without changing the main version of the project.
 
 ## Day 4’s Question
 
