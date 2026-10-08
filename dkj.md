@@ -31,6 +31,7 @@ https://share.gemini.google/NMNw9TZwxk6V
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
+https://share.gemini.google/zor59JHhOA8p 
 
 ## Day 5’s Question
 
