@@ -16,18 +16,18 @@ You can double-check a successful commit and push at [GitHub repo](https://githu
 ## Day 1’s Question
 
 If two coders, working in the main branch, modify the same file commit and push at different times, what are the consequences? Please put your answer into a markdown format.
+First coder will be successfull
+Second Coders will be rejected
+Changes need to be synchronized prior (test)
 
-    If two coders modify the same file while working in the main branch, the first coder to commit and push their changes will update the remote repository. When the second coder tries to push, Git may reject the push because their local branch is behind the remote main branch. The second coder must pull the latest changes and merge them with their own changes. If both coders changed the same lines of code, a merge conflict can occur, and the second coder must manually resolve the conflict before committing and pushing again. This is why it is generally safer for developers to use separate branches and merge their work into the main branch through pull requests
 
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
-    Commit early and often, but make each commit meaningful. Push regularly, especially when working with others.
 
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
-        A Git branch is a separate line of development in a Git repository. Branches allow developers to work on different features, fixes, or experiments without changing the main version of the project.
 
 ## Day 4’s Question
 

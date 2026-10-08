@@ -39,6 +39,9 @@ Branches in Git allow developers to work on features, fixes, or other changes wi
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+**Answer:**
+git fetch downloads the latest changes from the remote repository but does not automatically apply those changes to your current branch. git pull downloads the changes and then integrates them into your current branch, which makes it a more convenient command when you want to update your local files. Since my professor recommends using git pull, it makes sense for this assignment because it allows me to get the latest version of the shared repository before making my edits.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.

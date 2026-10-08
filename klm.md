@@ -46,6 +46,14 @@ Best practices include creating a separate branch for each feature or task, givi
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+### Answer - Day 4
+
+Both `git pull` and `git fetch` retrieve updates from a remote repository, but they handle those updates differently. **`git fetch`** downloads the latest changes but does not automatically add them to your current local branch. This allows you to review the changes before deciding whether to merge them.
+
+**`git pull`** downloads the latest changes and then integrates them into your current branch. My professor likely recommends `git pull` because it is more straightforward for our daily workflow and immediately keeps our local branch up to date with the work other developers have pushed.
+
+`git fetch` can be useful when you want more control and want to inspect changes before merging, while `git pull` is convenient when you are ready to update your local branch with the remote changes.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
