@@ -22,10 +22,11 @@ the first coder can commit and push there changes successfully. However, when th
 because the remote repository has newer changes.
 the second coder must use 'git pull' to get the latest changes before pushing agian. If both coders try to change the same line, a merge conflict will occur.
 
-
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+
+A good practice is to commit changes frequently instead of waiting until the entire project is finished. Developers should commit after completing a small task, fixing a bug, or making a impactful change. This makes it easier to track prrogress and identify mistakes.
 
 ## Day 3’s Question
 
