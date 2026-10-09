@@ -139,3 +139,8 @@ git pull is not objectively better. My professor may recommend it for simplicity
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+## Alternatives
+Hosted: GitLab, Bitbucket, Azure DevOps Repos, Codeberg, SourceHut, Gitee
+
+Self-hosted: GitLab CE, Gitea, Forgejo, Gogs
