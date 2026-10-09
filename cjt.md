@@ -99,6 +99,69 @@ Communicate about who's working on which files.
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
+## Day 2's Answer
+
+Git Commit and Push Best Practices
+Commit Frequency
+
+Commit early and often, in small logical units. There’s no universal number, but a good rule of thumb is to commit every time you complete one coherent, working change.
+
+Guideline	Recommendation
+Typical cadence	Every 15 to 60 minutes of active work, or whenever a logical step is done
+Size	Small enough to describe in one sentence; large enough to stand on its own
+Per day	Several commits is normal; a full day with only one commit is a warning sign
+State	Ideally each commit builds and passes tests
+Commit when you have:
+Finished a single logical change (a bug fix, a function, a refactor step)
+Reached a stable checkpoint before trying something risky
+Completed a change that can be described without using “and”
+Avoid:
+Giant commits that mix unrelated changes (feature + refactor + formatting)
+Tiny meaningless commits like “fix typo” repeated ten times (squash these before sharing)
+Broken commits that leave the build failing, especially on shared branches
+Push Frequency
+
+Push at least once per day, and more often when collaborating. Unpushed work exists on only one machine and is invisible to your team.
+
+Situation	Suggested push cadence
+Solo feature branch	At least daily, and at the end of every work session
+Team feature branch	After each meaningful commit or a few times a day
+Shared or main branch	Only after tests pass and the change is review-ready
+Long-running work	Push often as backup, and rebase or merge from main regularly
+Benefits of frequent pushing
+Backup against laptop failure or loss
+Visibility so teammates can see progress and give early feedback
+Smaller merge conflicts because branches diverge less
+Easier CI feedback on every push
+Commit Message Tips
+Use the imperative mood: Add login validation, not Added login validation
+Keep the subject line to about 50 characters, with a blank line before the body
+Explain why in the body, not just what changed
+Reference issues or tickets where relevant (Fixes #123)
+text
+Add rate limiting to login endpoint
+
+Prevents brute-force attempts by limiting each IP to 5 attempts
+per minute. Returns 429 with a Retry-After header.
+
+Fixes #482
+Workflow Recommendations
+Work on a feature branch, not directly on main.
+Commit locally as often as you like to create safe checkpoints.
+Clean up before sharing: use git rebase -i or squash to tidy messy WIP commits (only on branches that others haven’t based work on).
+Pull or rebase from main frequently (at least daily) to avoid large conflicts.
+Push regularly, then open a pull request when ready for review.
+Never force-push to shared branches unless the team has agreed to it. Prefer --force-with-lease on your own branches.
+Team Conventions Matter
+
+Practices vary by team and workflow:
+
+Trunk-based development: very small commits, merged to main multiple times per day behind feature flags
+Feature-branch / PR workflow: more flexibility locally, with commits squashed or tidied at merge
+Squash-merge teams: individual commit granularity matters less on the branch, but still helps you and reviewers during development
+
+Always follow your team’s documented conventions where they exist.
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
