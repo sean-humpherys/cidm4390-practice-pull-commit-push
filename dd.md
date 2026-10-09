@@ -70,6 +70,18 @@ Explain branches in git and their best practices? Please put your answer into a 
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+### Git Pull vs. Git Fetch
+
+#### Difference
+- `git fetch` downloads new commits from the remote but does not change your files or current branch.
+- `git pull` runs `git fetch` and then merges the changes into your current branch.
+- `git pull` = `git fetch` + `git merge`.
+
+#### Why The Professor Recommends `git pull`
+- It's one command that gets you up to date.
+- It's simpler for beginners than fetching and then merging separately.
+- It matches the basic pull, commit, push workflow used in class.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
