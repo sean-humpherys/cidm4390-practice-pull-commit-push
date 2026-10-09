@@ -24,6 +24,10 @@ Changes need to be synchronized prior (test)
 ## Day 2’s Question
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
+How often should you commit
+how often should you push
+why does frequency matter
+The best approach is to commit small, meaningful changes frequently and push completed, tested work regularly.
 
 ## Day 3’s Question
 
