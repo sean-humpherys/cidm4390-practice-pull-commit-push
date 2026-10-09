@@ -33,6 +33,10 @@ Explain branches in git and their best practices? Please put your answer into a 
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+    git fetch = Get updates and review them.
+
+git pull = Get updates and integrate them.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
