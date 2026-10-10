@@ -26,7 +26,7 @@ because the remote repository has newer changes.
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
-##A good practice is to commit changes frequently instead of waiting until the entire project is finished. Developers should commit after completing a small task, fixing a bug, or making a impactful change. This makes it easier to track prrogress and identify mistakes.
+_A good practice is to commit changes frequently instead of waiting until the entire project is finished. Developers should commit after completing a small task, fixing a bug, or making a impactful change. This makes it easier to track prrogress and identify mistakes._
 
 ## Day 3’s Question
 
@@ -37,6 +37,8 @@ Explain branches in git and their best practices? Please put your answer into a 
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
+
+https://claude.ai/share/b89b8d74-4c62-4693-b1fd-81aa67657ca1 
 
 ## Day 5’s Question
 
