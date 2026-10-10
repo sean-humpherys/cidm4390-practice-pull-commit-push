@@ -134,6 +134,20 @@ Each developer can work on their branch independently. Once their work is comple
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+**Explanation:** `git fetch` downloads the latest commits and updates from a remote repository without integrating them into your current branch.
+
+- **Downloads updates:** Retrieves new commits and information from the remote repository.
+- **Does not merge changes:** Your current branch and working files remain unchanged by the fetch itself.
+- **Allows inspection:** You can review incoming changes before deciding to merge or rebase them.
+- **Best used when:** You want to see what teammates have changed before incorporating their work.
+
+**Explanation** `git pull` downloads updates from a remote repository and integrates them into your current branch.
+
+- **Downloads updates:** Retrieves new commits and information from the remote repository.
+- **Integrates changes:** Incorporates remote changes into your current branch through merging or rebasing, depending on your Git          configuration.
+- **May cause merge conflicts:** If changes overlap, you may need to resolve conflicts before continuing.
+- **Best used when:** You want to update your current branch with the latest remote changes and continue working.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
