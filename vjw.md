@@ -157,6 +157,8 @@ While you should commit frequently locally—even if commits are small or experi
 * **Pushing Unfinished Work to Shared Branches:** Never push unreviewed, broken features to branches other developers depend on to build or test.
 * **Force-Pushing Shared Branches:** Never use `git push --force` on branches used by multiple team members without explicit team coordination (prefer `--force-with-lease` on private feature branches).
 
+Submitted Revised commit
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
