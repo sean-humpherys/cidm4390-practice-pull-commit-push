@@ -85,3 +85,17 @@ What is the difference between git pull and git fetch? My professor advises usin
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+### Alternatives to GitHub
+
+#### Hosted Platforms
+- **GitLab:** built-in CI/CD and DevOps tools; can also be self-hosted.
+- **Bitbucket:** by Atlassian; integrates with Jira and Trello.
+- **Azure DevOps:** by Microsoft; combines repos, boards, and pipelines.
+- **AWS CodeCommit:** Git hosting on AWS.
+- **Codeberg:** free, nonprofit-run, open-source-focused host.
+
+#### Self-Hosted Options
+- **Gitea:** lightweight and easy to run.
+- **Forgejo:** community fork of Gitea.
+- **GitLab Community Edition:** free self-hosted version of GitLab.
