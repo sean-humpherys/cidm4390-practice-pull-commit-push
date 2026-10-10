@@ -107,6 +107,85 @@ If you must override remote history, use git push --force-with-lease. It refuses
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
+Git Commit & Push Best Practices
+Core Principle
+
+Commit often, perfect later, publish once. Commits are cheap, local, and private until you push. Use them freely as save points, then tidy them up before sharing.
+
+How Often to Commit
+Recommended Frequency
+Every 15–60 minutes of active work is a common rule of thumb.
+More precisely: commit whenever you complete one logical unit of change. Time is a rough guide; the logical unit is what matters.
+Good Moments to Commit
+A function, method, or small feature works.
+A bug is fixed (ideally with its test).
+Tests pass after a change.
+Before starting a risky refactor or experiment.
+Before switching tasks, branches, or stopping for the day.
+After a rename or move. Keep these separate from content changes so diffs stay readable.
+What Makes a Good Commit
+Principle	Explanation
+Atomic	One logical change per commit. Don’t mix a bug fix with formatting cleanup.
+Buildable	Each commit on a shared branch should compile and pass tests. This keeps git bisect useful.
+Small	Easier to review, revert, and understand. Aim for diffs a reviewer can read in a few minutes.
+Well-described	Clear message explaining what and why (see below).
+Signs You’re Committing Too Rarely
+Commit messages like “lots of changes” or “WIP stuff.”
+Diffs touching dozens of unrelated files.
+Fear of losing hours of work if something goes wrong.
+Difficulty writing a single-sentence summary of the commit.
+Signs You’re Committing Too Often (on shared history)
+Long strings of “fix typo,” “oops,” “try again” commits.
+Commits that break the build mid-sequence.
+
+Fix: Squash or rebase these locally (git rebase -i) before pushing or merging.
+
+How Often to Push
+Recommended Frequency
+At least once per day for work in progress, even on a feature branch.
+Whenever a coherent set of commits is ready for others to see, review, or test.
+Before ending your workday. Your local machine is not a backup.
+Push to Your Feature Branch Freely
+Pushing to your own branch is low-risk. It backs up your work and enables early feedback and CI runs.
+Open a draft pull request early to show progress and get feedback.
+Be Deliberate About Pushing to Shared Branches
+Don’t push directly to main or develop unless your team’s workflow allows it.
+Make sure the code builds and tests pass before pushing to anything others depend on.
+Never force-push to a shared branch that others have pulled. On your own branch, prefer git push --force-with-lease over --force.
+Workflow-Specific Guidance
+Workflow	Commit Frequency	Push / Merge Frequency
+Trunk-based development	Many small commits per day	Integrate into trunk at least daily, often several times a day; use feature flags for unfinished work
+GitHub Flow / feature branches	Frequent local commits	Push branch daily; merge via PR when complete. Keep branches short-lived (ideally under 1–3 days)
+Git Flow	Frequent local commits	Push feature branches daily; merge to develop per feature, to main per release
+Solo / personal projects	Frequent	Push at least daily for backup
+
+General guidance: Long-lived branches cause painful merge conflicts. The longer a branch lives apart from the main line, the harder integration becomes. Sync with the main branch (git pull --rebase or merge) at least daily.
+
+Commit Message Guidelines
+Short summary in imperative mood (≤50 chars)
+
+Optional body explaining what changed and why, wrapped
+at ~72 characters. Reference issues if relevant.
+
+Fixes #123
+Use the imperative mood: “Add login validation,” not “Added” or “Adds.”
+Explain why in the body. The diff already shows what.
+Consider 
+Conventional Commits (feat:, fix:, docs:, etc.) if your team uses automated changelogs or versioning.
+Quick Checklist Before Pushing
+ Each commit is a single logical change
+ Code builds and tests pass
+ No secrets, credentials, or large binaries included
+ WIP/fixup commits are squashed (if pushing to a shared or review branch)
+ Commit messages are clear
+ Branch is up to date with the target branch
+TL;DR
+Action	Recommended Frequency
+Commit	Every logical unit of work, roughly every 15–60 minutes
+Push (feature branch)	At least daily, and whenever you want backup or feedback
+Integrate into main	At least daily for trunk-based teams; per completed feature otherwise. Keep branches short-lived
+Sync with main	At least daily
+
 ## Day 3’s Question
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
