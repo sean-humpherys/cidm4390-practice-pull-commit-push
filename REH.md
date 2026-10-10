@@ -33,6 +33,13 @@ The best approach is to commit small, meaningful changes frequently and push com
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+Keep the main branch stable
+Create branches for individual tasks
+Use descriptive branch names
+Commit and push regularly
+Keep branches updated
+Use pull requests
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
