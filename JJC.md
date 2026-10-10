@@ -40,3 +40,11 @@ git pull = Get updates and integrate them.
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+GitLab
+Bitbucket
+Codeberg
+SourceForge
+Azure Repos
+AWS CodeCommit
+Gitea
+SourceHut
