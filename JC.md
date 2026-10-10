@@ -190,6 +190,163 @@ Sync with main	At least daily
 
 Explain branches in git and their best practices? Please put your answer into a markdown format.
 
+Git Branches: Concepts and Best Practices
+What Is a Branch?
+
+A branch in Git is a lightweight, movable pointer to a commit. It lets you work on new features, bug fixes, or experiments separately from the main codebase.
+
+When you create a branch, Git doesn’t copy files. It creates a new pointer to the current commit.
+As you make commits on a branch, the pointer moves forward automatically.
+HEAD is a special pointer that tells Git which branch (or commit) you’re currently on.
+          feature-login
+               ↓
+A --- B --- C --- D
+       \
+        E --- F
+              ↑
+            main (HEAD)
+Why Use Branches?
+Isolation: Work on a feature without breaking stable code.
+Parallel development: Multiple people or tasks can progress at once.
+Safe experimentation: Delete a failed experiment without consequences.
+Code review: Branches pair naturally with pull/merge requests.
+Essential Branch Commands
+Task	Command
+List local branches	git branch
+List all branches (incl. remote)	git branch -a
+Create a branch	git branch <name>
+Switch to a branch	git switch <name>
+Create and switch	git switch -c <name>
+Rename current branch	git branch -m <new-name>
+Delete a merged branch	git branch -d <name>
+Force-delete a branch	git branch -D <name>
+Push branch to remote	git push -u origin <name>
+Delete a remote branch	git push origin --delete <name>
+Merge a branch into current	git merge <name>
+Rebase current onto another	git rebase <name>
+
+git switch is the modern alternative to git checkout for changing branches. git checkout still works but does many unrelated things.
+
+Merging vs. Rebasing
+Merge
+
+Combines histories and creates a merge commit.
+
+bash
+git switch main
+git merge feature-login
+✅ Preserves full, true history
+✅ Safe for shared branches
+❌ Can produce a cluttered history
+Rebase
+
+Replays your commits on top of another branch, producing a linear history.
+
+bash
+git switch feature-login
+git rebase main
+✅ Clean, linear history
+❌ Rewrites commit hashes
+⚠️ Never rebase branches others are working on
+Squash Merge
+
+Combines all of a branch’s commits into a single commit on the target branch, which keeps main tidy. It’s common in pull-request workflows.
+
+Common Branching Strategies
+1. GitHub Flow (simple, popular)
+main is always deployable.
+Create a short-lived branch for each change.
+Open a pull request, review, merge, deploy.
+
+Best for: Web apps, continuous deployment, small to medium teams.
+
+2. Git Flow (structured)
+main: production releases
+develop: integration branch
+feature/*, release/*, hotfix/*: supporting branches
+
+Best for: Projects with scheduled, versioned releases. It’s often considered heavy for modern CI/CD.
+
+3. Trunk-Based Development
+Everyone commits to main (the “trunk”) frequently, using very short-lived branches (hours to a day or two).
+Unfinished work is hidden behind feature flags.
+
+Best for: Mature teams with strong automated testing and CI.
+
+Best Practices
+Naming
+Use clear, descriptive names with a type prefix:
+feature/user-authentication
+fix/login-timeout
+hotfix/payment-crash
+chore/update-dependencies
+Include ticket IDs when relevant: feature/JIRA-123-add-search
+Use lowercase and hyphens; avoid spaces and special characters.
+Keep Branches Short-Lived
+Long-running branches drift from main and cause painful merge conflicts.
+Aim to merge within days, not weeks.
+Break large features into smaller, mergeable pieces.
+Sync Frequently
+
+Regularly pull in changes from main:
+
+bash
+git fetch origin
+git rebase origin/main   # or: git merge origin/main
+Protect Important Branches
+
+On your hosting platform (GitHub, GitLab, Bitbucket):
+
+Block direct pushes to main.
+Require pull request reviews.
+Require passing CI checks before merging.
+Disallow force-pushes.
+One Purpose per Branch
+Each branch should address a single feature, fix, or task.
+This makes reviews easier and reverts safer.
+Write Good Commits
+Make small, logical commits with meaningful messages.
+Clean up local history (e.g., git rebase -i) before sharing, not after.
+Clean Up After Merging
+Delete merged branches locally and remotely.
+Prune stale remote-tracking branches:
+bash
+git fetch --prune
+Never Rewrite Shared History
+Avoid rebase or push --force on branches others use.
+If you must force-push your own branch, prefer the safer option:
+bash
+git push --force-with-lease
+Quick Example Workflow
+bash
+# 1. Start from an up-to-date main
+git switch main
+git pull
+
+# 2. Create a feature branch
+git switch -c feature/add-search
+
+# 3. Work and commit
+git add .
+git commit -m "Add search bar component"
+
+# 4. Stay current with main
+git fetch origin
+git rebase origin/main
+
+# 5. Push and open a pull request
+git push -u origin feature/add-search
+
+# 6. After merge, clean up
+git switch main
+git pull
+git branch -d feature/add-search
+Summary
+Branches are cheap pointers, so use them freely.
+Pick a strategy that fits your team (GitHub Flow suits most teams).
+Keep branches small, focused, short-lived, and well-named.
+Protect main, sync often, and never rewrite shared history.
+
 ## Day 4’s Question
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
