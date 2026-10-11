@@ -316,6 +316,53 @@ git branch -d feature/user-profile
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+## Day 4's Answer
+git pull vs git fetch
+The short version
+git fetch downloads new commits, branches, and tags from the remote but does not change your working files or current branch.
+git pull does a git fetch and then merges (or rebases) those changes into your current branch.
+
+In other words:
+
+bash
+git pull  =  git fetch  +  git merge   # (or git rebase, if configured)
+Comparison
+	git fetch	git pull
+Downloads remote changes	Yes	Yes
+Updates your local branch	No	Yes
+Changes your working directory	No	Yes
+Can cause merge conflicts	No	Yes
+Risk level	Very low	Higher
+Example
+bash
+# Fetch: just look at what's new
+git fetch origin
+git log HEAD..origin/main      # see commits you don't have yet
+git diff HEAD origin/main      # see what changed
+
+# Then decide whether to integrate
+git merge origin/main
+
+# Pull: do it all in one step
+git pull origin main
+About your professor’s advice
+
+Your professor likely recommends git pull because it’s simpler for beginners: one command keeps your local code up to date. For solo projects or class assignments where you’re the only one pushing, it works fine.
+
+That said, neither command is universally “better”:
+
+Use git pull when you want the latest changes right now and you’re confident merging them is safe (e.g., your working directory is clean).
+Use git fetch when you want to review changes first, you have uncommitted or in-progress work, or you’re on a shared project where surprise merges could cause conflicts.
+
+Many experienced developers prefer fetch followed by an explicit merge or rebase because it gives them more control. If you want pull to rebase instead of creating merge commits, you can use:
+
+bash
+git pull --rebase
+Quick takeaway
+
+git fetch = “Show me what’s new.”
+git pull = “Show me what’s new and apply it to my branch.”
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
