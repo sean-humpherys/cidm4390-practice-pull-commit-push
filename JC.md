@@ -351,6 +351,73 @@ Protect main, sync often, and never rewrite shared history.
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+# `git fetch` vs. `git pull`
+
+## Summary
+
+| | `git fetch` | `git pull` |
+|---|---|---|
+| Downloads new commits from the remote | ✅ Yes | ✅ Yes |
+| Updates remote-tracking branches (e.g. `origin/main`) | ✅ Yes | ✅ Yes |
+| Changes your local branch and working files | ❌ No | ✅ Yes |
+| Can cause merge conflicts | ❌ Never | ⚠️ Possibly |
+| Equivalent to | — | `git fetch` + `git merge` (or `git rebase`) |
+
+## `git fetch`
+
+`git fetch` **downloads** new commits, branches, and tags from the remote repository but **does not touch your work**. Your local branch and files stay exactly as they were.
+
+```bash
+git fetch origin
+```
+
+After fetching, you can look at what changed before deciding what to do:
+
+```bash
+git log main..origin/main      # commits on the remote you don't have yet
+git diff main origin/main      # line-by-line differences
+```
+
+Then you integrate the changes yourself when you're ready:
+
+```bash
+git merge origin/main          # or: git rebase origin/main
+```
+
+## `git pull`
+
+`git pull` does **two steps in one**:
+
+1. `git fetch` – download the remote changes
+2. `git merge` (default) or `git rebase` – integrate them into your current branch
+
+```bash
+git pull origin main
+```
+
+It's convenient, but because it immediately modifies your branch, it can produce merge conflicts or unexpected merge commits before you've had a chance to see what's coming in.
+
+## Which should you use?
+
+Your professor's advice is reasonable, especially for coursework:
+
+- **Use `git pull` when** you're working alone or on a small team, you just want to get up to date, and you trust what's on the remote. It's simpler and has fewer steps to remember.
+- **Use `git fetch` when** you want to review incoming changes first, you're working on a shared branch with lots of activity, or you have local work you don't want disrupted unexpectedly.
+
+Neither is "better" — `git pull` is just `git fetch` plus an automatic integration step. A good way to think about it:
+
+> **`fetch` = look before you leap.  `pull` = leap.**
+
+## Helpful tip
+
+If you use `git pull` a lot, consider rebasing instead of merging to keep history linear:
+
+```bash
+git pull --rebase
+# or make it the default:
+git config --global pull.rebase true
+```
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
