@@ -26,7 +26,7 @@ because the remote repository has newer changes.
 
 What are best practices regarding how often to commit and push, including recommended frequency? Please put your answer into a markdown format.
 
-_A good practice is to commit changes frequently instead of waiting until the entire project is finished. Developers should commit after completing a small task, fixing a bug, or making a impactful change. This makes it easier to track prrogress and identify mistakes._
+**A good practice is to commit changes frequently instead of waiting until the entire project is finished. Developers should commit after completing a small task, fixing a bug, or making a impactful change. This makes it easier to track prrogress and identify mistakes.**
 
 ## Day 3’s Question
 
@@ -43,3 +43,5 @@ https://claude.ai/share/b89b8d74-4c62-4693-b1fd-81aa67657ca1
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+*GitHub is the go to for Git repositories but there are alternatives like Bitbucket and Azure DevOprs Repos which are ideal for private repositories and unique code.*
