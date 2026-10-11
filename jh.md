@@ -86,6 +86,31 @@ For most small team projects, a practical workflow is: create a branch → make 
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+## Response: 
+git fetch downloads remote updates for you to review. git pull downloads those updates and attempts to integrate them into your current branch.
+git fetch	Downloads commits and updates remote-tracking branches, such as origin/main.
+git pull	Fetches updates, then integrates them using a fast-forward, merge, or rebase, depending on your options and configuration.
+
+Git’s documentation describes pull as fetching and integrating changes. git-pull Documentation
+Example
+Suppose a teammate pushes a new commit to main.
+git fetch origin
+
+Your local origin/main updates, but your own main stays where it was. You can review the incoming commits before merging:
+git log --oneline HEAD..origin/main
+git merge origin/main
+
+If you are already on main, you can fetch and merge in one command:
+git pull --no-rebase origin main
+
+That command fetches main from origin and merges it into your currently checked-out branch. git-pull Documentation
+Why might your professor recommend git pull?
+Your professor likely prefers it because it completes the update in one step, which makes a classroom workflow easier to follow. Using only git fetch can leave students thinking their working files are updated when they have only downloaded the changes.
+That is a reasonable recommendation for your class, but neither command is universally better:
+- Use git pull when you are ready to incorporate remote changes.
+- Use git fetch when you want to inspect changes before incorporating them.
+Before pulling, check git status and commit or stash unfinished changes. Pulling can require conflict resolution if your work overlaps with incoming changes.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
