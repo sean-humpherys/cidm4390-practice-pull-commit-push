@@ -146,3 +146,14 @@ Fewer Commands to Memorize: For those still learning version control, managing r
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+GitLab: Best all-around alternative with built-in CI/CD and self-hosting options.
+
+Bitbucket: Best if you already use Jira, Confluence, and Atlassian tools.
+
+Codeberg: Best for open-source projects wanting an independent, privacy-focused platform.
+
+Gitea or Forgejo: Best for lightweight, fast, self-hosted Git servers.
+
+Azure Repos: Best for enterprise teams integrated into the Microsoft ecosystem.
+
+SourceHut: Best for minimalists who prefer fast, lightweight, email-based workflows.
