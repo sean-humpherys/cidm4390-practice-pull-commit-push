@@ -366,3 +366,36 @@ git pull = “Show me what’s new and apply it to my branch.”
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+## Day 5's Answer
+# Alternatives to GitHub
+
+## Hosted Platforms
+
+| Platform | Best For | Notes |
+|---|---|---|
+| **GitLab** | All-in-one DevOps | Built-in CI/CD, issue tracking, and container registry; free tier plus self-hosting option |
+| **Bitbucket** | Teams using Atlassian tools | Tight Jira and Trello integration; Bitbucket Pipelines for CI/CD |
+| **Codeberg** | Open-source projects | Non-profit, community-run, powered by Forgejo |
+| **SourceHut** | Minimalists | Lightweight, no JavaScript required, email-based workflows |
+| **Azure DevOps** | Microsoft ecosystem | Repos, pipelines, boards, and artifacts in one suite |
+| **Gitee** | Developers in China | Fast access in mainland China, similar feel to GitHub |
+
+## Self-Hosted Options
+
+- **Gitea**: lightweight, easy to install, low resource usage
+- **Forgejo**: a community-governed fork of Gitea
+- **GitLab Community Edition**: full-featured self-hosted GitLab
+- **Gogs**: very simple and minimal, runs on modest hardware
+
+## How to Choose
+
+- **Need built-in CI/CD and project management?** Choose GitLab or Azure DevOps.
+- **Already using Jira?** Choose Bitbucket.
+- **Want to avoid big corporate platforms?** Choose Codeberg or SourceHut.
+- **Want full control over your data?** Self-host Gitea, Forgejo, or GitLab CE.
+- **Want something lightweight?** Choose Gitea, Gogs, or SourceHut.
+
+## Migration Tip
+
+Most of these platforms offer import tools that bring over repositories, issues, and pull requests from GitHub, so switching is usually straightforward.
