@@ -44,6 +44,10 @@ Use pull requests
 
 What is the difference between git pull and git fetch? My professor advises using git pull over git fetch? Can you put your answer into a markdown format please.
 
+The git fetch command downloads the latest commits, branches, and changes from a remote repository without automatically merging them into your current local branch.
+
+The git pull command downloads changes from a remote repository and automatically integrates them into your current local branch. By default, it typically performs a fetch followed by a merge, although Git can also be configured to use rebase.
+
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
