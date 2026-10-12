@@ -421,3 +421,36 @@ git config --global pull.rebase true
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+Alternatives to GitHub
+Hosted Git platforms (SaaS)
+Platform	Best for	Notable strengths
+GitLab	Teams wanting an all-in-one DevOps platform	Built-in CI/CD, issue tracking, container registry, security scanning; also self-hostable
+Bitbucket (Atlassian)	Teams already using Jira and Confluence	Tight Jira integration, Bitbucket Pipelines for CI/CD
+Azure DevOps (Azure Repos)	Microsoft and enterprise shops	Boards, Pipelines, Test Plans, and Artifacts in one suite
+AWS CodeCommit	Teams fully on AWS	IAM integration. Note: AWS stopped accepting new customers in 2024, so check its current status before choosing it.
+Codeberg	Open-source projects that prefer a nonprofit host	Community-run and privacy-focused, built on Forgejo
+SourceHut (sr.ht)	Minimalists and email-based workflows	Lightweight, no JavaScript required, patch-via-email model
+Gitea Cloud / Gitee	Gitea's hosted option, or the China-focused market (Gitee)	Gitee is popular with developers in China
+Self-hosted options
+Tool	Description
+GitLab Community Edition	Full-featured, open-source version of GitLab
+Gitea	Lightweight Git service written in Go, easy to run on modest hardware
+Forgejo	Community fork of Gitea with a focus on governance and federation
+Gogs	Very minimal self-hosted Git service, the predecessor to Gitea
+OneDev	Git server with built-in CI/CD and code search
+Phorge	Community continuation of Phabricator, with code review and task tracking
+Bare Git + cgit/GitWeb	The simplest setup: Git over SSH with a basic web viewer
+Non-Git version control
+Perforce Helix Core is common in game development and with large binary assets.
+Mercurial (Heptapod) is a GitLab-based host for Mercurial repositories.
+Fossil is a single-binary version control system with a built-in wiki, tickets, and forum, made by the SQLite team.
+How to choose
+Want built-in CI/CD and DevOps? GitLab or Azure DevOps
+Already use Jira? Bitbucket
+Want full control or need to stay on-premises? GitLab CE, Gitea, or Forgejo
+Open-source project that wants a nonprofit host? Codeberg
+Large binary files or game assets? Perforce
+Small team on limited hardware? Gitea or Forgejo
+
+Tip: Pricing and free-tier limits change often, so check each platform's current plans before migrating. Most of these platforms (GitLab, Gitea, Forgejo, Bitbucket) have importers that bring over repositories, issues, and pull requests from GitHub.
