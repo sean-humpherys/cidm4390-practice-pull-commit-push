@@ -51,3 +51,11 @@ The git pull command downloads changes from a remote repository and automaticall
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+Platform	Description	Best For
+GitLab	A Git-based platform offering repository hosting, issue tracking, CI/CD pipelines, and project management tools.	Software development teams and DevOps
+Bitbucket	A Git repository hosting service developed by Atlassian that integrates with Jira and other development tools.	Businesses and collaborative development
+Azure DevOps	Microsoft's development platform providing Git repositories, project management, automated testing, and deployment tools.	Enterprise development and Microsoft environments
+Gitea	A lightweight, open-source Git hosting platform that can be installed on a private server.	Small teams and self-hosted repositories
+Forgejo	A community-driven, open-source Git hosting platform focused on independence and self-hosting.	Developers wanting control over their repositories
+SourceForge	A platform that hosts open-source software projects and provides version control and software distribution tools.	Open-source software projects
