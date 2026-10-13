@@ -114,3 +114,19 @@ Before pulling, check git status and commit or stash unfinished changes. Pulling
 ## Day 5’s Question
 
 What are alternatives to github?Please put your answer into a markdown format.
+
+## Response: 
+Alternatives to GitHub
+1. GitLab
+   - Offers Git repository hosting, code reviews, project planning, and automated testing and deployment (CI/CD).
+   - Useful for teams that want to manage their development workflow in one platform. about.gitlab.com
+2. Bitbucket
+   - Provides Git repository hosting, code reviews, and CI/CD tools.
+   - Integrates with Jira, making it useful for teams already using Atlassian products. wac-cdn.atlassian.com
+3. Codeberg
+   - A nonprofit, community-driven platform built on Forgejo.
+   - Focuses on free and open-source development, making it a good option for open-source projects. docs.codeberg.org
+4. Gitea
+   - Offers Git repository hosting and collaboration tools that you can run on your own server.
+   - Useful for developers and organizations that want control over their hosting environment. docs.gitea.com
+Note: Git is the version-control software, while GitHub is a service that hosts Git repositories. You can use Git with any of these alternatives.
